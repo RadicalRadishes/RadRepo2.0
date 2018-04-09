@@ -1,0 +1,7 @@
+﻿enable-migrations -ContextTypeName API.Models.ApplicationDbContext -MigrationsDirectory Migrations\ApplicationUserMigrations
+add-migration -ConfigurationTypeName API.Migrations.ApplicationUserMigrations.Configuration "Initial Application Migration"
+update-database -ConfigurationTypeName API.Migrations.ApplicationUserMigrations.Configuration
+
+enable-migrations -ContextTypeName API.Models.Scores.ScoresDbContext -MigrationsDirectory Migrations\ScoreMigrations
+add-migration -ConfigurationTypeName API.Migrations.ScoreMigrations.Configuration "Initial Scores Migration"
+update-database -ConfigurationTypeName API.Migrations.ScoreMigrations.Configuration
