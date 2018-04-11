@@ -1,0 +1,3 @@
+﻿enable-migrations -ContextTypeName API.Models.ApplicationDbContext -MigrationsDirectory Migrations\ApplicationUserMigrations
+add-migration -ConfigurationTypeName API.Migrations.Configuration "Initial Application Migration"
+update-database -ConfigurationTypeName API.Migrations.ApplicationUserMigrations.Configuration
