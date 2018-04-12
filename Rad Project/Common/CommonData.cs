@@ -28,5 +28,6 @@ namespace Common
     {
         public string imageNae = string.Empty;
         public Position ballPos;
+        public Position VelocityDirection;
     }
 }

@@ -28,6 +28,7 @@ namespace API
             if (players.Count < 2)
             {
                 PlayerData newPlayer = new PlayerData();
+                //Sets ID, used to determine if on the Left side or Right side
                 newPlayer.playerID = (players.Count + 1).ToString();
                 if (newPlayer.playerID == "1")
                 {
@@ -77,13 +78,18 @@ namespace API
             }
         }
 
+        public void Bounce()
+        {
 
+        }
 
         public void LeftGame(PlayerData pdata)
         {
 
             Clients.Others.Left(pdata); // Calls the Action<PlayerData> left in the client
             players.Remove(pdata); // remove from players on server data
+
+
         }
 
         public void SpawnBall()

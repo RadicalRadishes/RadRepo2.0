@@ -161,6 +161,7 @@ namespace Pong
 
         private void LeaveGame(PlayerData playdata)
         {
+            // If an event is to occur on the client side for when a player leaves, place here
 
         }
 
@@ -176,7 +177,6 @@ namespace Pong
                 new Point(player.playerPosition.X, player.playerPosition.Y));
             clientPlayer = player;
 
-            //To display coins on Load
         }
 
 

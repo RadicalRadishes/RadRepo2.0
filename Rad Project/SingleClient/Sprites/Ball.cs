@@ -13,7 +13,7 @@ namespace SingleClient.Sprites
         private bool _isPlaying;
 
         public Score Score;
-        public int SpeedIncrementSpan = 10; // How often the speed with increment
+        public int SpeedIncrementSpan = 10; // How often the speed will increase
 
         public Ball(Texture2D texture) : base(texture)
         {
@@ -26,7 +26,7 @@ namespace SingleClient.Sprites
             {
                 _startPosition = Position;
                 _startSpeed = Speed;
-                Restart();
+                Restart(); // Pick direction to travel
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
@@ -35,14 +35,15 @@ namespace SingleClient.Sprites
             if (!_isPlaying)
                 return;
 
+//Increase speed every x seconds
             _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-
             if (_timer > SpeedIncrementSpan)
             {
                 Speed++;
                 _timer = 0;
             }
-
+            
+            //Check if intersects
             foreach (var sprite in sprites)
             {
                 if (sprite == this)
@@ -61,12 +62,14 @@ namespace SingleClient.Sprites
             if (Position.Y <= 0 || Position.Y + _texture.Height >= Game1.ScreenHeight)
                 Velocity.Y = -Velocity.Y;
 
+            //If goes off screen Left, increase player2's score
             if (Position.X <= 0)
             {
                 Score.Score2++;
                 Restart();
             }
 
+            //If goes off screen Right, increase player1's score
             if (Position.X + _texture.Width >= Game1.ScreenWidth)
             {
                 Score.Score1++;
@@ -80,7 +83,7 @@ namespace SingleClient.Sprites
         {
             var direction = Game1.random.Next(0, 4);
 
-            //direction ball moves in
+            //Pick random starting direction to 'bounce' to
             switch (direction)
             {
                 case 0:

@@ -39,12 +39,16 @@ namespace SingleClient
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            //Load in Textures
             var batTexture = Content.Load<Texture2D>("Bat");
             var ballTexture = Content.Load<Texture2D>("Ball");
             _score = new Score(Content.Load<SpriteFont>("Font"));
+
+            //Create a list of 'Sprites' to be used for gameObjects
             _sprites = new List<Sprite>()
             {
                 new Sprite(Content.Load<Texture2D>("Background")),
+                //Player1
                 new Bat(batTexture)
                 {
                     Position = new Vector2(20,(ScreenHeight /2) - (batTexture.Height/2)),
@@ -54,6 +58,7 @@ namespace SingleClient
                         Down = Keys.S,
                     }
                 },
+                //Player2
                  new Bat(batTexture)
                 {
                     Position = new Vector2(ScreenWidth - 20 - batTexture.Width,(ScreenHeight /2) - (batTexture.Height/2)),
@@ -63,6 +68,7 @@ namespace SingleClient
                         Down = Keys.Down,
                     }
                 },
+                 //Ball
                  new Ball(ballTexture)
                  {
                      Position =  new Vector2((ScreenWidth/2)- (ballTexture.Width /2), (ScreenHeight / 2) - (ballTexture.Height/2)),
@@ -94,6 +100,7 @@ namespace SingleClient
 
             spriteBatch.Begin();
 
+            //Draw each Sprite in the list
             foreach (Sprite sprite in _sprites)
             {
                 sprite.Draw(spriteBatch);
