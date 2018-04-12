@@ -120,7 +120,7 @@
             .removeClass("field-validation-error")
             .removeData("unobtrusiveContainer")
             .find(">*")  // If we were using valmsg-replace, get the underlying error
-                .removeData("unobtrusiveContainer");
+            .removeData("unobtrusiveContainer");
     }
 
     function validationInfo(form) {
@@ -131,7 +131,7 @@
             execInContext = function (name, args) {
                 var func = defaultOptions[name];
                 func && $.isFunction(func) && func.apply(form, args);
-            }
+            };
 
         if (!result) {
             result = {
@@ -236,10 +236,10 @@
             // element with data-val=true
             var $selector = $(selector),
                 $forms = $selector.parents()
-                                  .addBack()
-                                  .filter("form")
-                                  .add($selector.find("form"))
-                                  .has("[data-val=true]");
+                    .addBack()
+                    .filter("form")
+                    .add($selector.find("form"))
+                    .has("[data-val=true]");
 
             $selector.find("[data-val=true]").each(function () {
                 $jQval.unobtrusive.parseElement(this, true);
@@ -346,7 +346,7 @@
         }
 
         match = new RegExp(params).exec(value);
-        return (match && (match.index === 0) && (match[0].length === value.length));
+        return match && match.index === 0 && match[0].length === value.length;
     });
 
     $jQval.addMethod("nonalphamin", function (value, element, nonalphamin) {

@@ -1,9 +1,9 @@
-﻿using System.Data.Entity;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using API.Models.Scores;
+﻿using API.Models.Scores;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace API.Models
 {
@@ -26,13 +26,15 @@ namespace API.Models
     {
         public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
         {
-
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
         public DbSet<Score> Scores { get; set; }
+
+        public System.Data.Entity.DbSet<API.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
