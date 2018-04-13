@@ -37,7 +37,7 @@ namespace API.Models.DAL
             return context.Users.ToList();
         }
 
-        public ApplicationUser GetItemByID(int id)
+        public ApplicationUser GetItemByID(string id)
         {
             ApplicationUser user = context.Users.Find(id);
             return user;

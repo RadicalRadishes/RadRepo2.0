@@ -7,7 +7,7 @@ namespace API.Models.DAL
     {
         IEnumerable<T> GetAllItems();
 
-        T GetItemByID(int id);
+        T GetItemByID(string id);
 
         void InsertItem(T item);
 

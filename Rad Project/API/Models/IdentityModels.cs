@@ -34,5 +34,7 @@ namespace API.Models
             return new ApplicationDbContext();
         }
         public DbSet<Score> Scores { get; set; }
+
+        //public System.Data.Entity.DbSet<API.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
