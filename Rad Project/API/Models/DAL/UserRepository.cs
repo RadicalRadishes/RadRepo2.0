@@ -20,7 +20,7 @@ namespace API.Models.DAL
             context.SaveChanges();
         }
 
-        public void DeleteItem(int id)
+        public void DeleteItem(string id)
         {
             ApplicationUser user = context.Users.Find(id);
             context.Users.Remove(user);
@@ -37,7 +37,7 @@ namespace API.Models.DAL
             return context.Users.ToList();
         }
 
-        public ApplicationUser GetItemByID(int id)
+        public ApplicationUser GetItemByID(string id)
         {
             ApplicationUser user = context.Users.Find(id);
             return user;
@@ -46,6 +46,7 @@ namespace API.Models.DAL
         public void InsertItem(ApplicationUser item)
         {
             context.Users.Add(item);
+            context.SaveChanges();
         }
 
         public void Save()
@@ -55,6 +56,7 @@ namespace API.Models.DAL
 
         public void UpdateItem(ApplicationUser item)
         {
+            ApplicationUser user = context.Users.Find(item);
             context.Entry(item).State = EntityState.Modified;
             context.SaveChanges();
         }

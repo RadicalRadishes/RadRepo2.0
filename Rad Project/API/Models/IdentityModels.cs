@@ -35,6 +35,6 @@ namespace API.Models
 
         public DbSet<Score> Scores { get; set; }
 
-        public System.Data.Entity.DbSet<API.Models.ApplicationUser> ApplicationUsers { get; set; }
+        //public DbSet<API.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

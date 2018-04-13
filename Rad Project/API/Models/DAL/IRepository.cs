@@ -7,13 +7,13 @@ namespace API.Models.DAL
     {
         IEnumerable<T> GetAllItems();
 
-        T GetItemByID(int id);
+        T GetItemByID(string id);
 
         void InsertItem(T item);
 
-        void UpdateItem(T item);
+        void UpdateItem(T id);
 
-        void DeleteItem(int id);
+        void DeleteItem(string id);
 
         void Save();
     }

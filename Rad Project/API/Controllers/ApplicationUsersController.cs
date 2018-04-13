@@ -27,7 +27,7 @@ namespace API.Controllers
 
         // GET: api/ApplicationUsers/5
         [ResponseType(typeof(ApplicationUser))]
-        public IHttpActionResult GetApplicationUser(int id)
+        public IHttpActionResult GetApplicationUser(string id)
         {
             ApplicationUser applicationUser = repository.GetItemByID(id);
             if (applicationUser == null)
@@ -40,43 +40,10 @@ namespace API.Controllers
 
         // PUT: api/ApplicationUsers/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutApplicationUser(string id, ApplicationUser applicationUser)
+        public IHttpActionResult PutApplicationUser(string firstName, string lastName)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            ApplicationUser applicationUser = new ApplicationUser { FirstName = firstName, LastName = lastName };
 
-            if (id != applicationUser.Id)
-            {
-                return BadRequest();
-            }
-
-            repository.UpdateItem(applicationUser);
-
-            try
-            {
-                repository.Save();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ApplicationUserExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        // POST: api/ApplicationUsers
-        [ResponseType(typeof(ApplicationUser))]
-        public IHttpActionResult PostApplicationUser(ApplicationUser applicationUser)
-        {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -84,8 +51,48 @@ namespace API.Controllers
 
             repository.InsertItem(applicationUser);
 
+            //if (id != applicationUser.Id)
+            //{
+            //    return BadRequest();
+            //}
+
+            //repository.UpdateItem(applicationUser);
+
+            //try
+            //{
+            //    repository.Save();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!ApplicationUserExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        // POST: api/ApplicationUsers
+        [ResponseType(typeof(ApplicationUser))]
+        public IHttpActionResult PostApplicationUser(string firstName, string lastName)
+        {
+            ApplicationUser applicationUser = new ApplicationUser { FirstName = firstName, LastName = lastName };
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            //repository.InsertItem(applicationUser);
+
             try
             {
+                repository.InsertItem(applicationUser);
                 repository.Save();
             }
             catch (DbUpdateException)
@@ -105,7 +112,7 @@ namespace API.Controllers
 
         // DELETE: api/ApplicationUsers/5
         [ResponseType(typeof(ApplicationUser))]
-        public IHttpActionResult DeleteApplicationUser(int id)
+        public IHttpActionResult DeleteApplicationUser(string id)
         {
             ApplicationUser applicationUser = repository.GetItemByID(id);
             if (applicationUser == null)
