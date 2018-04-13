@@ -11,7 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleClient", "SingleClient\SingleClient.csproj", "{4D674CA1-F3D7-45FA-9F73-A25784BC2F2E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Videos", "Videos", "{FEE5DE8D-95CD-4B96-86A1-66078675853E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Videos", "Videos", "{594249D3-58E5-4843-BB73-2F664EAACE60}"
+	ProjectSection(SolutionItems) = preProject
+		Recordings\PeterCaseyS00162137.webm = Recordings\PeterCaseyS00162137.webm
+		RecordingNote.txt = RecordingNote.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
