@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Peter/Source/Repos/RadRepo2.02/Rad Project/Pong/Content/Background.png</File>
-    <File>C:/Users/Peter/Source/Repos/RadRepo2.02/Rad Project/Pong/Content/Ball.png</File>
-    <File>C:/Users/Peter/Source/Repos/RadRepo2.02/Rad Project/Pong/Content/Bat.png</File>
-    <File>C:/Users/Peter/Source/Repos/RadRepo2.02/Rad Project/Pong/Content/Font.spritefont</File>
+    <File>C:/Users/Peter/Source/Repos/RadRepo2.0/Rad Project/Pong/Content/Background.png</File>
+    <File>C:/Users/Peter/Source/Repos/RadRepo2.0/Rad Project/Pong/Content/Ball.png</File>
+    <File>C:/Users/Peter/Source/Repos/RadRepo2.0/Rad Project/Pong/Content/Bat.png</File>
+    <File>C:/Users/Peter/Source/Repos/RadRepo2.0/Rad Project/Pong/Content/Font.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

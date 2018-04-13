@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{CC2DFD66-98FE-4543-A4DC-6EE541E5C4BA}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{259C34D7-59D7-41AF-ACAB-427BB535526F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleClient", "SingleClient\SingleClient.csproj", "{4D674CA1-F3D7-45FA-9F73-A25784BC2F2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Videos", "Videos", "{594249D3-58E5-4843-BB73-2F664EAACE60}"
+	ProjectSection(SolutionItems) = preProject
+		Recordings\PeterCaseyS00162137.webm = Recordings\PeterCaseyS00162137.webm
+		RecordingNote.txt = RecordingNote.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
