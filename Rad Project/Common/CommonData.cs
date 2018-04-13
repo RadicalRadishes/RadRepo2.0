@@ -28,6 +28,6 @@ namespace Common
     {
         public string imageNae = string.Empty;
         public Position ballPos;
-        public Position VelocityDirection;
+        public Position VelocityDirection; // Used to determine direction traveling in
     }
 }

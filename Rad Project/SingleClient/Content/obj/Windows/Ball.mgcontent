@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/nnult/Source/Repos/RadRepo2.02/Rad Project/SingleClient/Content/Ball.png</SourceFile>
-  <SourceTime>2018-04-11T15:07:21.7078108+01:00</SourceTime>
-  <DestFile>C:/Users/nnult/Source/Repos/RadRepo2.02/Rad Project/SingleClient/Content/bin/Windows/Ball.xnb</DestFile>
-  <DestTime>2018-04-12T15:47:37.2342939+01:00</DestTime>
+  <SourceFile>C:/Users/Peter/Source/Repos/RadRepo2.0/Rad Project/SingleClient/Content/Ball.png</SourceFile>
+  <SourceTime>2018-04-13T16:09:58.6381113+01:00</SourceTime>
+  <DestFile>C:/Users/Peter/Source/Repos/RadRepo2.0/Rad Project/SingleClient/Content/bin/Windows/Ball.xnb</DestFile>
+  <DestTime>2018-04-13T16:19:32.3034496+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
