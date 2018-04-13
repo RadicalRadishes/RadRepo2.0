@@ -16,6 +16,7 @@ namespace API
 
         public static List<PlayerData> players = new List<PlayerData>();
 
+        public BallData ball;
 
 
         public PlayerData Join()
@@ -78,7 +79,7 @@ namespace API
             }
         }
 
-        public void Bounce()
+        public void Bounce(BallData _ballData)
         {
 
         }

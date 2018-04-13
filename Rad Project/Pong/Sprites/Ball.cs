@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Common;
+using Microsoft.AspNet.SignalR.Client;
+using System;
 
 namespace Pong.Sprites
 {
@@ -20,7 +22,7 @@ namespace Pong.Sprites
 
         public Score Score;
         public int SpeedIncrementSpan = 10; // How often the speed with increment
-        BallData ballData;
+        public BallData ballData;
 
 
         public Ball(Game game, BallData bData ) : base(game)
@@ -97,19 +99,29 @@ namespace Pong.Sprites
             switch (direction)
             {
                 case 0:
-                    Velocity = new Vector2(1, 1);
+                    //Velocity = new Vector2(1, 1);
+                    ballData.VelocityDirection.X = 1;
+                    ballData.VelocityDirection.Y = 1;
+
                     break;
 
                 case 1:
-                    Velocity = new Vector2(1, -1);
+                    //Velocity = new Vector2(1, -1);
+                    ballData.VelocityDirection.X = 1;
+                    ballData.VelocityDirection.Y = -1;
                     break;
 
                 case 2:
-                    Velocity = new Vector2(-1, -1);
+                    // Velocity = new Vector2(-1, -1);
+                    ballData.VelocityDirection.X = -1;
+                    ballData.VelocityDirection.Y = -1;
                     break;
 
                 case 3:
-                    Velocity = new Vector2(-1, 1);
+                    // Velocity = new Vector2(-1, 1);
+                    ballData.VelocityDirection.X = -1;
+                    ballData.VelocityDirection.Y = 1;
+
                     break;
             }
 
@@ -118,5 +130,17 @@ namespace Pong.Sprites
             _timer = 0;
             _isPlaying = false;
         }
+
+        public void Bounce()
+        {
+            IHubProxy proxy = Game.Services.GetService<IHubProxy>();// Gets the Proxy from the services subscription
+            proxy.Invoke("Bounce", new Object[]
+                {
+                     ballData.VelocityDirection
+                });
+        }
+
+
+
     }
 }

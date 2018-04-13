@@ -63,6 +63,11 @@ namespace Pong
             Action<string, Position> otherMove = clientOtherMoved;
             proxy.On<string, Position>("OtherMove", otherMove);
 
+            Action<string, Position> ballBounced = clientOtherMoved;
+            proxy.On<string, Position>("BallBounce", ballBounced);
+
+
+
             //gets called by proxy to send leftmessage
             Action<PlayerData> left = LeaveGame;
             proxy.On<PlayerData>("Left", left);
@@ -157,6 +162,18 @@ namespace Pong
             }
         }
 
+        private void ballhasBounced()
+        {
+            foreach (var item in Components)
+            {
+                if (item.GetType() == typeof(Ball))
+                {
+                    Ball b = ((Ball)item);
+                    //Implement code to set Ball's direction to bounce direction
+
+                }
+            }
+        }
 
 
         private void LeaveGame(PlayerData playdata)
