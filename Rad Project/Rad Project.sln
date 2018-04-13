@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pong", "Pong\Pong.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{259C34D7-59D7-41AF-ACAB-427BB535526F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleClient", "SingleClient\SingleClient.csproj", "{F67DACDB-FB1D-4255-A6F1-8739527303E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{259C34D7-59D7-41AF-ACAB-427BB535526F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{259C34D7-59D7-41AF-ACAB-427BB535526F}.Release|x86.ActiveCfg = Release|Any CPU
 		{259C34D7-59D7-41AF-ACAB-427BB535526F}.Release|x86.Build.0 = Release|Any CPU
+		{F67DACDB-FB1D-4255-A6F1-8739527303E3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F67DACDB-FB1D-4255-A6F1-8739527303E3}.Debug|x86.ActiveCfg = Debug|x86
+		{F67DACDB-FB1D-4255-A6F1-8739527303E3}.Debug|x86.Build.0 = Debug|x86
+		{F67DACDB-FB1D-4255-A6F1-8739527303E3}.Release|Any CPU.ActiveCfg = Release|x86
+		{F67DACDB-FB1D-4255-A6F1-8739527303E3}.Release|x86.ActiveCfg = Release|x86
+		{F67DACDB-FB1D-4255-A6F1-8739527303E3}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

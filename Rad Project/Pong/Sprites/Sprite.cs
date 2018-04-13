@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Pong.Sprites
 {
-    public class Sprite
+    public class Sprite : DrawableGameComponent
     {
         protected Texture2D _texture;
 
@@ -22,7 +22,7 @@ namespace Pong.Sprites
             }
         }
 
-        public Sprite(Texture2D texture)
+        public Sprite(Game game, Texture2D texture, Point pos) : base(game)
         {
             _texture = texture;
         }

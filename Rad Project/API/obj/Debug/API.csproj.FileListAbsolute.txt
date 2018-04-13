@@ -262,3 +262,7 @@ C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad P
 C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad Project\API\obj\Debug\API.csproj.CopyComplete
 C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad Project\API\obj\Debug\API.dll
 C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad Project\API\obj\Debug\API.pdb
+C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad Project\API\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad Project\API\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad Project\API\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Jonny\Desktop\College\Semester 6\RAD 302\Final Project\RadRepo2.0\Rad Project\API\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
