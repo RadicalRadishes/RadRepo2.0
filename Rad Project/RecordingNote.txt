@@ -1,3 +1,5 @@
 
-
+Peter Casey:
 Video Recordings is Located in the Folder 'Recordings' of the project directory if there is difficulty opening videos here
+If Video Doesn't Open in windowws Media player, it can be played by dragging the video file into google chrome / firefox
+
